@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Cake Ordering System</title>
+</head>
+<body>
+
+<h2>Cake Ordering System</h2>
+
+<input type="text" id="name" placeholder="Customer Name"><br><br>
+
+<input type="text" id="cake" placeholder="Cake Name"><br><br>
+
+<select id="category">
+    <option>Birthday</option>
+    <option>Wedding</option>
+    <option>Anniversary</option>
+</select><br><br>
+
+<select id="size">
+    <option>1 Kg</option>
+    <option>2 Kg</option>
+    <option>3 Kg</option>
+</select><br><br>
+
+<input type="text" id="address" placeholder="Delivery Address"><br><br>
+
+<button onclick="orderCake()">Place Order</button>
+
+<h3 id="result"></h3>
+
+<script>
+function orderCake() {
+
+    let orderNo = Math.floor(Math.random() * 900000 + 100000);
+
+    document.getElementById("result").innerHTML =
+        "Cake Ordered Successfully!<br>" +
+        "Order No: " + orderNo + "<br>" +
+        "Status: Confirmed";
+}
+</script>
+
+</body>
+</html>
