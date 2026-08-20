@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Railway Reservation</title>
+</head>
+<body>
+
+<h2>Railway Reservation System</h2>
+
+<input type="text" id="name" placeholder="Passenger Name"><br><br>
+
+<input type="text" id="from" placeholder="From"><br><br>
+
+<input type="text" id="to" placeholder="To"><br><br>
+
+<input type="date" id="date"><br><br>
+
+<select id="class">
+    <option>Sleeper</option>
+    <option>AC</option>
+</select><br><br>
+
+<button onclick="book()">Book Ticket</button>
+
+<h3 id="result"></h3>
+
+<script>
+function book() {
+    let pnr = Math.floor(Math.random() * 900000 + 100000);
+
+    document.getElementById("result").innerHTML =
+        "Ticket Booked!<br>" +
+        "PNR: " + pnr + "<br>" +
+        "Status: Confirmed";
+}
+</script>
+
+</body>
+</html>
