@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Library Management System</title>
+</head>
+<body>
+
+<h2>Library Management System</h2>
+
+<input type="text" id="name" placeholder="Student Name"><br><br>
+
+<input type="text" id="book" placeholder="Book Name"><br><br>
+
+<input type="text" id="author" placeholder="Author Name"><br><br>
+
+<input type="date" id="date"><br><br>
+
+<select id="type">
+    <option>Issue Book</option>
+    <option>Return Book</option>
+</select><br><br>
+
+<button onclick="library()">Submit</button>
+
+<h3 id="result"></h3>
+
+<script>
+function library() {
+
+    let id = Math.floor(Math.random() * 9000 + 1000);
+
+    document.getElementById("result").innerHTML =
+        "Request Successful!<br>" +
+        "Library ID: " + id + "<br>" +
+        "Status: Book Issued";
+}
+</script>
+
+</body>
+</html>
